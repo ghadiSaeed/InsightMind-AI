@@ -17,17 +17,17 @@
            1. CSS VARIABLES & BRANDING
            ========================================================================== */
         :root {
-            --primary: #5A4452;
-            --primary-light: #7c6172;
-            --primary-dark: #3f2f39;
-            --secondary: #A7AFC2;
-            --accent: #E8BBB6;
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --primary-dark: #4338ca;
+            --secondary: #c7d2fe;
+            --accent: #c7d2fe;
             
-            --bg-main: #EEE8E5;
-            --surface-bg: rgba(255, 255, 255, 0.65);
-            --surface-border: #C8D0CF;
+            --bg-main: #f3f4f6;
+            --surface-bg: #FFFFFF;
+            --surface-border: #f3f4f6;
             
-            --text-main: #2d2229;
+            --text-main: #1f2937;
             --text-muted: #6b7280;
             --text-inverse: #ffffff;
             
@@ -35,20 +35,20 @@
             --success: #10b981;
             
             --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 8px 32px 0 rgba(90, 68, 82, 0.1);
+            --shadow-md: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
             
             --radius-md: 12px;
             --radius-lg: 16px;
         }
 
         [data-theme="dark"] {
-            --bg-main: #2d2229;
-            --surface-bg: rgba(63, 47, 57, 0.7);
-            --surface-border: #5A4452;
+            --bg-main: #1f2937;
+            --surface-bg: rgba(31, 41, 55, 0.7);
+            --surface-border: #6366f1;
             
-            --text-main: #EEE8E5;
-            --text-muted: #A7AFC2;
-            --text-inverse: #2d2229;
+            --text-main: #f3f4f6;
+            --text-muted: #c7d2fe;
+            --text-inverse: #1f2937;
             
             --shadow-md: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         }
@@ -136,14 +136,14 @@
         .upload-label {
             display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem;
             border: 2px dashed var(--secondary); border-radius: var(--radius-md); cursor: pointer;
-            color: var(--primary); font-weight: 600; transition: 0.2s; background: rgba(255,255,255,0.3);
+            color: var(--primary); font-weight: 600; transition: 0.2s; background: #f3f4f6;
         }
-        .upload-label:hover { background: rgba(232, 187, 182, 0.2); border-color: var(--primary); }
+        .upload-label:hover { background: #c7d2fe; border-color: var(--primary); }
 
         .doc-list { list-style: none; overflow-y: auto; flex: 1; margin-bottom: 1rem; }
         .doc-item {
             display: flex; align-items: center; justify-content: space-between; padding: 0.75rem;
-            border-radius: var(--radius-md); margin-bottom: 0.5rem; background: rgba(0,0,0,0.03); cursor: pointer; border: 1px solid transparent;
+            border-radius: var(--radius-md); margin-bottom: 0.5rem; background: #FFFFFF; cursor: pointer; border: 1px solid transparent;
         }
         .doc-item:hover { border-color: var(--surface-border); }
         .doc-item.active { background: var(--primary); color: #fff; box-shadow: var(--shadow-sm); }
@@ -164,9 +164,9 @@
         .view-container.active { display: flex; }
 
         /* PDF Viewer */
-        .pdf-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0.5rem; background: rgba(0,0,0,0.03); border-radius: var(--radius-md); margin-bottom: 1rem; gap: 0.5rem; }
+        .pdf-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0.5rem; background: #FFFFFF; border-radius: var(--radius-md); margin-bottom: 1rem; gap: 0.5rem; }
         .pdf-search { padding: 0.4rem; border-radius: var(--radius-md); border: 1px solid var(--surface-border); background: var(--surface-bg); color: var(--text-main); }
-        .canvas-wrapper { flex: 1; overflow: auto; display: flex; justify-content: center; background: rgba(0,0,0,0.1); border-radius: var(--radius-md); min-height: 0; }
+        .canvas-wrapper { flex: 1; overflow: auto; display: flex; justify-content: center; background: #f3f4f6; border-radius: var(--radius-md); min-height: 0; }
         canvas {max-width:none;}
 
         /* Tools Header */
@@ -183,8 +183,8 @@
         #network-graph { flex: 1; border-radius: var(--radius-md); background: rgba(255,255,255,0.4); border: 1px solid var(--surface-border); min-height: 0; position: relative; overflow: hidden; }
 
         /* Presentation */
-        .slides-wrapper { flex: 1; overflow-y: auto; display: flex; flex-direction: column; align-items: center; padding: 1rem; background: rgba(0,0,0,0.03); border-radius: var(--radius-md); }
-        .slide { width: 100%; max-width: 900px; aspect-ratio: 16/9; background: #ffffff; color: #2d2229; padding: 3.5rem; border-radius: 12px; box-shadow: var(--shadow-md); position: relative; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--surface-border); }
+        .slides-wrapper { flex: 1; overflow-y: auto; display: flex; flex-direction: column; align-items: center; padding: 1rem; background: #FFFFFF; border-radius: var(--radius-md); }
+        .slide { width: 100%; max-width: 900px; aspect-ratio: 16/9; background: #ffffff; color: #1f2937; padding: 3.5rem; border-radius: 12px; box-shadow: var(--shadow-md); position: relative; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--surface-border); }
         .slide h2 { color: var(--primary); margin-bottom: 1.5rem; font-size: 2.2rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
         .slide .content-area { flex: 1; display: flex; flex-direction: column; justify-content: center; }
         .slide ul { font-size: 1.3rem; line-height: 1.8; margin-left: 2rem; color: var(--text-main); }
@@ -195,7 +195,7 @@
 
         /* Notes Workspace */
         .notes-workspace { display: flex; flex-direction: column; flex: 1; gap: 1rem; overflow-y: auto; padding: 0.5rem; }
-        .notes-editor { flex: 1; width: 100%; min-height: 250px; resize: none; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--surface-border); background: rgba(255, 255, 255, 0.5); font-family: inherit; font-size: 1rem; line-height: 1.6; outline: none; }
+        .notes-editor { flex: 1; width: 100%; min-height: 250px; resize: none; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--surface-border); background: #FFFFFF; font-family: inherit; font-size: 1rem; line-height: 1.6; outline: none; }
         .bookmarks-panel { background: rgba(255, 255, 255, 0.4); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 1rem; height: 200px; overflow-y: auto; }
 
         /* ==========================================================================
@@ -204,7 +204,7 @@
         .quick-tools { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem; }
         .quick-tools button { font-size: 0.8rem; padding: 0.5rem; justify-content: center;}
 
-        .chat-container { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: rgba(255,255,255,0.3); border-radius: var(--radius-md); border: 1px solid var(--surface-border); }
+        .chat-container { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: #f3f4f6; border-radius: var(--radius-md); border: 1px solid var(--surface-border); }
         .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; }
         .message { max-width: 90%; padding: 0.75rem 1rem; border-radius: 12px; line-height: 1.5; font-size: 0.95rem; }
         .message p { margin-bottom: 0.5rem; } .message p:last-child { margin-bottom: 0; }
@@ -215,7 +215,7 @@
         .citation-link { color: var(--primary-light); text-decoration: underline; cursor: pointer; font-weight: 600; transition: 0.2s; }
         .citation-link:hover { color: var(--primary); }
 
-        details.agent-thinking { background: rgba(167, 175, 194, 0.15); border-left: 4px solid var(--secondary); padding: 0.75rem; border-radius: 4px 8px 8px 4px; margin-bottom: 1rem; font-size: 0.85rem; color: var(--text-muted); }
+        details.agent-thinking { background: #c7d2fe; border-left: 4px solid var(--secondary); padding: 0.75rem; border-radius: 4px 8px 8px 4px; margin-bottom: 1rem; font-size: 0.85rem; color: var(--text-muted); }
         details.agent-thinking summary { cursor: pointer; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; outline: none; }
 
         .chat-input-area { display: flex; padding: 0.75rem; gap: 0.5rem; border-top: 1px solid var(--surface-border); background: rgba(255,255,255,0.5); }
@@ -870,24 +870,24 @@
                         shape: 'box', 
                         margin: 10, 
                         borderWidth: 1, 
-                        font: { size: 14, color: '#2d2229', face: 'system-ui, sans-serif' },
-                        color: { background: '#ffffff', border: '#C8D0CF' },
+                        font: { size: 14, color: '#16587B', face: 'system-ui, sans-serif' },
+                        color: { background: '#ffffff', border: '#DADEE1' },
                         shadow: false // No expensive shadow rendering
                     },
                     edges: { 
                         smooth: false, // Straight lines instead of bezier curves
-                        color: '#A7AFC2', 
+                        color: '#B9D8E1', 
                         arrows: 'to', 
                         width: 1 
                     },
                     groups: {
-                        0: { color: { background: '#5A4452', border: '#3f2f39' }, font: { color: 'white' } },
-                        1: { color: { background: '#E8BBB6', border: '#d6a19c' } }, 
-                        2: { color: { background: '#C8D0CF', border: '#A7AFC2' } },
+                        0: { color: { background: '#629BB5', border: '#4A7C93' }, font: { color: 'white' } },
+                        1: { color: { background: '#B9D8E1', border: '#d6a19c' } }, 
+                        2: { color: { background: '#DADEE1', border: '#B9D8E1' } },
                         3: { color: { background: '#f5d0c5', border: '#e3b5a8' } }, 
                         4: { color: { background: '#dce2e1', border: '#becac8' } },
-                        5: { color: { background: '#A7AFC2', border: '#818a9e' }, font: { color: 'white'} }, 
-                        6: { color: { background: '#7c6172', border: '#5A4452' }, font: { color: 'white'} }
+                        5: { color: { background: '#B9D8E1', border: '#818a9e' }, font: { color: 'white'} }, 
+                        6: { color: { background: '#629BB5', border: '#629BB5' }, font: { color: 'white'} }
                     }
                 };
                 
@@ -973,11 +973,11 @@
         }
         function exportPresentation() {
             if (state.presentationSlides.length === 0) return; showToast("Exporting...", "info");
-            const wrap = document.createElement('div'); wrap.style = 'width:1200px; padding:20px; background:#EEE8E5;';
+            const wrap = document.createElement('div'); wrap.style = 'width:1200px; padding:20px; background:#DADEE1;';
             state.presentationSlides.forEach((s, i) => {
                 const div = document.createElement('div'); div.style = 'width:100%; aspect-ratio:16/9; background:#fff; padding:3.5rem; border-radius:12px; margin-bottom:20px; position:relative; display:flex; flex-direction:column; page-break-after:always;';
                 const contentList = (s.content || []).map(c=>`<li style="margin-bottom:0.75rem;">${c}</li>`).join('');
-                div.innerHTML = `<h2 style="color:#5A4452; margin-bottom:1.5rem; font-size:2.2rem; border-bottom:2px solid #E8BBB6; padding-bottom:0.5rem;">${s.title || "Slide"}</h2><div style="flex:1;"><ul style="font-size:1.3rem; line-height:1.8; margin-left:2rem;">${contentList}</ul></div>${s.citation?`<div style="position:absolute; bottom:1.5rem; left:3.5rem; font-size:0.85rem; color:#5c6270;">Source: ${s.citation}</div>`:''}<div style="position:absolute; bottom:1.5rem; right:3.5rem; font-weight:bold; color:#A7AFC2;">Slide ${i+1}</div>`;
+                div.innerHTML = `<h2 style="color:#629BB5; margin-bottom:1.5rem; font-size:2.2rem; border-bottom:2px solid #B9D8E1; padding-bottom:0.5rem;">${s.title || "Slide"}</h2><div style="flex:1;"><ul style="font-size:1.3rem; line-height:1.8; margin-left:2rem;">${contentList}</ul></div>${s.citation?`<div style="position:absolute; bottom:1.5rem; left:3.5rem; font-size:0.85rem; color:#5c6270;">Source: ${s.citation}</div>`:''}<div style="position:absolute; bottom:1.5rem; right:3.5rem; font-weight:bold; color:#B9D8E1;">Slide ${i+1}</div>`;
                 wrap.appendChild(div);
             });
             html2pdf().set({ margin:0.2, filename:'InsightMind-Presentation.pdf', image:{type:'jpeg', quality:0.98}, html2canvas:{scale:2}, jsPDF:{unit:'in', format:'letter', orientation:'landscape'} }).from(wrap).save();
@@ -985,3 +985,4 @@
     </script>
 </body>
 </html>
+
